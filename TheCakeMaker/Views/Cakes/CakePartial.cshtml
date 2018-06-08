@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "CakePartial";
+}
+
+@using TheCakeMaker.Models;
+@model List<Cake>
+@{
+    foreach (var item in Model)
+    {
+
+        <ul>
+            <li>
+                <div class="fh5co-food-desc">
+                    <figure>
+                        <img src=@item.image class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
+                    </figure>
+                    <div>
+                        <h3>@item.name</h3>
+                        <p>@item.detail Madelein hay còn gọi là bánh con sò – một loại bánh ngọt Pháp được làm theo theo công thức của sponge cake (gateau cơ bản). Đặc biệt, Madelein chứa nhiều bơ hơn nên cốt bánh khá mềm và ẩm. Chiếc bánh này là một phần không thể thiếu trong các tiệc trà chiều ở Pháp.</p>
+                    </div>
+                    <br /><br />
+                          <div>@Html.ActionLink("Xem chi tiết", "Details", new { id = item.id })</div>
+                </div>
+                <div class="fh5co-food-pricing">
+                    <p style="color :darkseagreen">Đơn giá: </p>@item.price đ
+                </div>
+
+            </li>
+        </ul>
+    }
+}

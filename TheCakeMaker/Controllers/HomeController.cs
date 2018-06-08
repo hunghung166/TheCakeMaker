@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TheCakeMaker.Models;
 
 namespace TheCakeMaker.Controllers
 {
     public class HomeController : Controller
     {
+        TheCakeMakerContext db = new TheCakeMakerContext();
         public ActionResult Index()
         {
             return View();
@@ -26,5 +28,7 @@ namespace TheCakeMaker.Controllers
 
             return View();
         }
+
+        
     }
 }

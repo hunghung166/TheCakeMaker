@@ -15,6 +15,7 @@ namespace TheCakeMaker.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        TheCakeMakerContext db = new TheCakeMakerContext();
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 

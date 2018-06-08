@@ -1,0 +1,61 @@
+﻿@model TheCakeMaker.Cake
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2> @Html.Action("GioHangPartial", "GioHang")
+
+<div>
+    <h4>Cake</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type.name)
+        </dd>
+
+    </dl>
+    @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMaSP = Model.id, @strURL = Request.Url.ToString() }))
+    {
+        <button class="add-to-cart btn btn-default" style="cursor:pointer; background-color:red; width:200px; height:80px" type="submit">Thêm giỏ hàng</button>
+    }
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

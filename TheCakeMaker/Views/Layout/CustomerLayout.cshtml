@@ -1,0 +1,180 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Foodee &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <meta name="author" content="FREEHTML5.CO" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Merriweather:300,400italic,300italic,400,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="~/Content/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="~/Content/css/icomoon.css">
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="~/Content/css/simple-line-icons.css">
+    <!-- Datetimepicker -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap-datetimepicker.min.css">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="~/Content/css/flexslider.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css">
+
+    <link rel="stylesheet" href="~/Content/css/style.css">
+
+    <script src="~/Content/js/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+    @RenderBody()
+    <div id="fh5co-container">
+        <div id="fh5co-home" class="js-fullheight" data-section="home">
+
+            <div class="flexslider">
+
+                <div class="fh5co-overlay"></div>
+                <div class="fh5co-text">
+                    <div class="container">
+                        <div class="row">
+                            <h1 class="to-animate">Cake Maker</h1>
+                            <h2 class="to-animate">Designed <span>by</span> <a href="http://freehtml5.co/" target="_blank">Hùng Nguyễn</a></h2>
+                        </div>
+                    </div>
+                </div>
+                <ul class="slides">
+                    <li style="background-image: url(~/Content/images/474428695_5661309737001_5661262459001-vs.jpg);" data-stellar-background-ratio="0.5"></li>
+                    <li style="background-image: url(~/Content/images/474428695_5661309737001_5661262459001-vs.jpg);" data-stellar-background-ratio="0.5"></li>
+                    <li style="background-image: url(~/Content/images/474428695_5661309737001_5661262459001-vs.jpg);" data-stellar-background-ratio="0.5"></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="js-sticky">
+            <div class="fh5co-main-nav">
+                <div class="container-fluid">
+                    <div class="fh5co-menu-1">
+                        <a href="#" data-nav-section="home">Home</a>
+                        <a href="#" data-nav-section="about">About</a>
+                        <a href="#" data-nav-section="features">Features</a>
+                    </div>
+                    <div class="fh5co-logo">
+                        <a href="index.html">Cake Maker</a>
+                    </div>
+                    <div class="fh5co-menu-2">
+                        <a href="#" data-nav-section="menu">Menu</a>
+                        <a href="#" data-nav-section="events">Events</a>
+                        <a href="#" data-nav-section="reservation">Reservation</a>
+                        @Html.Action("GioHangPartial","GioHang")
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fh5co-type" style="background-image: url(~/Content/images/slide_3.jpg);" data-stellar-background-ratio="0.5">
+            <div class="fh5co-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    @Html.Action("TypePartial","Types")
+                </div>
+            </div>
+        </div>
+
+        <div id="fh5co-menus" data-section="menu">
+            <div class="container">
+                <div class="row text-center fh5co-heading row-padded">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="heading to-animate">Menu</h2>
+                        <p class="sub-heading to-animate">Have it your way</p>
+                    </div>
+                </div>
+                <div class="row row-padded">
+                    <div class="col-md-12">
+                        <div class="fh5co-food-menu to-animate-2">
+                            @Html.Action("CakePartial", "Cakes")
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4 text-center to-animate-2">
+                        <p><a href="#" class="btn btn-primary btn-outline">More Food Menu</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="fh5co-footer">
+        <div class="container">
+            <div class="row row-padded">
+                <div class="col-md-12 text-center">
+                    <p class="to-animate">
+                        &copy; 2016 Foodee Free HTML5 Template. <br> Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://pexels.com/" target="_blank">Pexels</a> <br> Tasty Icons Free <a href="http://handdrawngoods.com/store/tasty-icons-free-food-icons/" target="_blank">handdrawngoods</a>
+                    </p>
+                    <p class="text-center to-animate"><a href="#" class="js-gotop">Go To Top</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul class="fh5co-social">
+                        <li class="to-animate-2"><a href="#"><i class="icon-facebook"></i></a></li>
+                        <li class="to-animate-2"><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li class="to-animate-2"><a href="#"><i class="icon-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/Content/js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="~/Content/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <!-- Bootstrap DateTimePicker -->
+    <script src="~/Content/js/moment.js"></script>
+    <script src="~/Content/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- Waypoints -->
+    <script src="~/Content/js/jquery.waypoints.min.js"></script>
+    <!-- Stellar Parallax -->
+    <script src="~/Content/js/jquery.stellar.min.js"></script>
+
+    <!-- Flexslider -->
+    <script src="~/Content/js/jquery.flexslider-min.js"></script>
+    <script>
+        $(function () {
+            $('#date').datetimepicker();
+        });
+    </script>
+    <!-- Main JS -->
+    <script src="~/Content/js/main.js"></script>
+
+</body>
+</html>
